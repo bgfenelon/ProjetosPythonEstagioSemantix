@@ -9,6 +9,7 @@ from Projetos.TagCleane.tag_cleaner import RemoverTags
 from Projetos.ValidarCpf.validarcpf_bianca import ValidarCPF
 from Projetos.ValorMoedas.valor_moedas_bianca import ValorMoedas
 from Projetos.WordCount.conta_palavras import ContarPalavra
+from Projetos.StopwordsCleaner.remove_stopwords import RemovaStopWords
 
 # executar Calcular Feriados
 if __name__ == '__main__':
@@ -72,3 +73,8 @@ if __name__ == '__main__':
     path = ''
     print(ContarPalavra().conta_palavras("{}/Projetos/WordCount/texto.txt".format(path)))
 
+# executar Stop Words
+if __name__ == '__main__':
+    print('Stop Words')
+    path = ''
+    print(RemovaStopWords().remova_stopwords("{}/Projetos/StopwordsCleaner/texto.txt".format(path)))

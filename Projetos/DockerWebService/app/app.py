@@ -1,11 +1,6 @@
 from flask import Flask
 from flask import render_template
-import csv
 import pymysql
-
-#
-# from geradores import retira_formatacao_cpf
-# from geradores import valida_cpf
 
 app = Flask(__name__,template_folder='template') # Inicializa a aplicação
 
@@ -18,13 +13,8 @@ mydatabase = pymysql.connect(host='localhost',
 cursor = mydatabase .cursor()
 
 
-
-
 @app.route('/<int:cpf>',methods = ['GET', 'POST'])
 def buscando_dados_cpf(cpf):
-
-  # cpf = valida_cpf(retira_formatacao_cpf(cpf))
-
   cursor.execute("SELECT cpf FROM consultar")
 
   myresult = cursor.fetchall()

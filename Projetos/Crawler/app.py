@@ -2,7 +2,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-from services.crawler import crawler
+from Projetos.Crawler.services.crawler import crawler
 
 @app.route("/")
 def app_crawler():
@@ -28,4 +28,4 @@ def app_crawler():
             </l1>
     """.format(img_1,link_1,img_2,link_2,img_3,link_3), 200
 
-app.run(port=7000)
+app.run(port=7777)

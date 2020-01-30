@@ -1,10 +1,8 @@
 import unittest
 
-from distancia_zeros.conta_zeros_bianca import conta_zeros
-
+from Projetos.DistanciaZeros.conta_zeros_bianca import conta_zeros
 
 class TestDistanciaZero(unittest.TestCase):
-
 
     def test_conta_zeros(self):
         #Cenario 1 entrada esperada
@@ -17,10 +15,7 @@ class TestDistanciaZero(unittest.TestCase):
         self.assertEqual(type(conta_zeros('100')),int)
 
         #Cenario 4 entrada Nula
-        try:
-            self.assertFalse(conta_zeros())
-        except TypeError:
-            print("Função não recebe Nulos! ")
+        self.assertEqual(conta_zeros(None),0)
 
         #cenario 5 testando outro valor
         self.assertTrue(conta_zeros('rdf0000wsdrt00000d0w0e0r000g00f0d00000'))

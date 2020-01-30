@@ -2,10 +2,10 @@ import sys
 import requests
 import bs4
 
-from services.tag_clear import remove_tags
-from services.puctuation_cleaner import remova_puct
-from services.remove_stopwords import remova_stopwords
-from services.word_count import conta_palavras
+from Projetos.Crawler.services.tag_clear import remove_tags
+from Projetos.Crawler.services.puctuation_cleaner import remova_puct
+from Projetos.Crawler.services.remove_stopwords import remova_stopwords
+from Projetos.Crawler.services.word_count import conta_palavras
 
 txt = sys.argv[1:]
 
